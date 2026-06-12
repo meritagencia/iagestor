@@ -2103,8 +2103,24 @@
       /* ── Form Submission Redirect ── */
       const leadForm = document.getElementById("leadForm");
       if (leadForm) {
-        leadForm.addEventListener("submit", e => {
+        leadForm.addEventListener("submit", async e => {
           e.preventDefault(); // Evita o recarregamento da página
+
+          const formData = new FormData(leadForm);
+          const data = Object.fromEntries(formData.entries());
+
+          try {
+            await fetch("https://merit-n8n.jcspip.easypanel.host/webhook/bd8e51b1-1b2c-4116-8180-568e9f649276", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(data)
+            });
+          } catch (error) {
+            console.error("Erro no webhook:", error);
+          }
+
           window.location.href = "obrigado.html";
         });
       }
