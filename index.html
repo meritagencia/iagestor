@@ -64,7 +64,7 @@
       display: inline-block;
       opacity: 0;
       transform: translateY(100%);
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      clip-path: polygon(-20% -30%, 120% -30%, 120% -30%, -20% -30%);
       transition:
         opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
         transform 800ms cubic-bezier(0.16, 1, 0.3, 1),
@@ -74,7 +74,7 @@
     .char.revealed {
       opacity: 1;
       transform: translateY(0);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(-20% -30%, 120% -30%, 120% 130%, -20% 130%);
     }
 
     /* Scroll animation */
@@ -1341,7 +1341,7 @@
           <!-- Coluna de texto -->
           <div class="hero-content">
             <span class="eyebrow">Exclusivo para Líderes</span>
-            <h1 id="hero-title">A <span class="hero-highlight">maior virada</span> competitiva dos últimos 20 anos está acontecendo<span class="gradient-text">agora.</span></h1>
+            <h1 id="hero-title">A <span class="hero-highlight">maior virada</span> competitiva dos últimos 20 anos está acontecendo <span class="gradient-text">agora.</span></h1>
             <p class="hero-copy">
               Sua empresa está <strong style="color:#fff;font-weight:600;">dentro ou fora?</strong> Quem dominar IA nos próximos 18 meses vai definir quem lidera os próximos 10 anos — e quem vai ficar explicando por que ficou para trás.
             </p>
